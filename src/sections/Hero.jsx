@@ -11,7 +11,7 @@ const Hero = () => {
   const [ currentShoe, setCurrentShoe ] = useState(bigShoe1);
 
   return (
-    <section className="flex flex-col xl:flex-row items-center w-full min-h-screen max-container gap-10 font-montserrat">
+    <section id="home" className="flex flex-col xl:flex-row items-center w-full min-h-screen max-container gap-10 font-montserrat">
       <div className="xl:w-2/5 w-full max-xl:padding-x pt-28 flex flex-col justify-center items-start relative">
         <p className="text-coral-red text-xl">Our Summer Collections</p>
         <h1 className=" mt-10 max-sm:text-[72] max-sm:leading[82] text-8xl font-bold font-palanquin">
