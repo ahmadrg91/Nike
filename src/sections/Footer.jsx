@@ -22,9 +22,9 @@ const Footer = () => {
         <div className="flex max-sm:flex-col gap-10 justify-between w-full font-montserrat">
             {
               footerLinks.map(section => 
-                <div key={section.title} className="flex flex-col gap-4 text-white-400">
-                  <h3 className="text-2xl font-bold">{section.title}</h3>
-                  <ul>
+                <div key={section.title} className="flex flex-col gap-4">
+                  <h3 className="text-2xl font-semibold text-white">{section.title}</h3>
+                  <ul className="text-white-400">
                     {section.links.map(link =>
                       <li key={link.name} className="mt-2">
                         <a href={link.link}>{link.name}</a>
@@ -36,7 +36,7 @@ const Footer = () => {
             }
         </div>
       </div>
-      <div className="flex justify-between items-center max-lg:flex-col gap-2 text-white-400">
+      <div className="flex justify-between items-center max-lg:flex-col gap-2 text-white-400 font-montserrat">
         <p className="flex gap-1">
           <img src={copyrightSign} height={14} width={14}/>
           Copyright. All rights reserved
