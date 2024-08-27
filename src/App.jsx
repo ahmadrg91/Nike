@@ -31,13 +31,13 @@ const App = () => (
     <section className="padding bg-pale-blue">
       <CustomerReviews />
     </section>
-    <section className="padding-x sm:py-32 py-16 w-full">
+    <section className="padding-x w-full py-16 sm:py-32">
       <Subscribe />
     </section>
-    <section className="padding-x padding-t pb-8 bg-black">
+    <section className="padding-x padding-t bg-black pb-8">
       <Footer />
     </section>
   </main>
-)
+);
 
 export default App;
