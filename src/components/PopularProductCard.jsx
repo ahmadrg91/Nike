@@ -3,13 +3,15 @@ import { star } from "../assets/icons";
 const PopularProductCard = ({ imgURL, name, price, ratings }) => {
   return (
     <div className="flex w-full flex-col gap-3">
-      <img
-        src={imgURL}
-        alt="shoe card"
-        width={282}
-        height={282}
-        className="object-contain"
-      />
+      <div className="bg-product-card dark:bg-d-procuct-card w-fit bg-cover bg-center">
+        <img
+          src={imgURL}
+          alt="shoe card"
+          width={282}
+          height={282}
+          className="object-contain"
+        />
+      </div>
       <div className="mt-6 flex gap-3 text-2xl text-slate-gray">
         <img
           src={star}

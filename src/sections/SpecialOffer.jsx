@@ -5,7 +5,7 @@ import Button from "../components/Button";
 const SpecialOffer = () => {
   return (
     <section className="max-container flex items-center justify-between gap-10 max-xl:flex-col-reverse">
-      <div className="flex flex-1 items-center justify-center">
+      <div className="flex flex-1 items-center justify-center bg-offer bg-cover bg-center dark:bg-d-offer">
         <img
           src={offer}
           width={773}
@@ -36,7 +36,7 @@ const SpecialOffer = () => {
           />
           <Button
             label="Learn more"
-            bg="bg-white"
+            bg="bg-white dark:bg-gray-900"
             text="text-slate-gray"
             border="border-slate-gray"
           />

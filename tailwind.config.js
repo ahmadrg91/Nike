@@ -34,6 +34,14 @@ export default {
       backgroundImage: {
         'hero': "url('assets/images/collection-background.svg')",
         'card': "url('assets/images/thumbnail-background.svg')",
+        'd-hero': "url('assets/images/collection-background-dark.svg')",
+        'd-card': "url('assets/images/thumbnail-background-dark.svg')",
+        'product-card': "url('assets/images/product-card-background.svg')",
+        'd-procuct-card': "url('assets/images/product-card-background-dark.svg')",
+        'shoe-8': "url('assets/images/shoe8-background.svg')",
+        'd-shoe-8': "url('assets/images/shoe8-background-dark.svg')",
+        'offer': "url('assets/images/offer-background.svg')",
+        'd-offer': "url('assets/images/offer-background-dark.svg')",
       },
       screens: {
         "wide": "1440px"

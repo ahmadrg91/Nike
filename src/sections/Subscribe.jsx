@@ -11,7 +11,7 @@ const Subscribe = () => {
         <input
           type="email"
           placeholder="subscribe@nike.com"
-          className="input"
+          className="input dark:bg-gray-900"
         />
         <div className="flex items-center max-sm:w-full max-sm:justify-end">
           <Button

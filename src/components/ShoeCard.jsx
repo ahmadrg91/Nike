@@ -10,7 +10,7 @@ const ShoeCard = ({ shoe, currentShoe, changeCurrentShoe }) => {
       } cursor-pointer rounded-xl border-2 max-sm:flex-1`}
       onClick={handleClick}
     >
-      <div className="flex items-center justify-center rounded-xl bg-card bg-cover bg-center max-sm:p-4 sm:h-40 sm:w-40">
+      <div className="flex items-center justify-center rounded-xl bg-card dark:bg-d-card bg-cover bg-center max-sm:p-4 sm:h-40 sm:w-40">
         <img
           src={shoe.thumbnail}
           alt="shoes collection"
