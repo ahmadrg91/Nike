@@ -5,6 +5,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: center;
+}
+
 * {
   margin: 0;
   padding: 0;
