@@ -33,8 +33,8 @@ export default {
       },
       backgroundImage: {
         'hero': "url('assets/images/collection-background.svg')",
-        'card': "url('assets/images/thumbnail-background.svg')",
         'd-hero': "url('assets/images/collection-background-dark.svg')",
+        'card': "url('assets/images/thumbnail-background.svg')",
         'd-card': "url('assets/images/thumbnail-background-dark.svg')",
         'product-card': "url('assets/images/product-card-background.svg')",
         'd-procuct-card': "url('assets/images/product-card-background-dark.svg')",
