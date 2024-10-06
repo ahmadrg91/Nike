@@ -43,3 +43,4 @@ export {
   thumbnailShoe3,
   aboutUsImage,
 };
+

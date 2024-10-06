@@ -2,8 +2,8 @@ import { useState } from "react";
 import Button from "../../../components/Button";
 import ShoeCard from "../../../components/ShoeCard";
 import { shoes, statistics } from "../../../constants";
-import { arrowRight } from "../../../assets/icons";
 import { bigShoe1 } from "../../../assets/images";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
   const [currentShoe, setCurrentShoe] = useState(bigShoe1);
@@ -28,7 +28,7 @@ const Hero = () => {
         </p>
         <Button
           label="Shop Now"
-          icon={arrowRight}
+          icon={faArrowRight}
         />
         <div className="mt-16 flex w-full flex-wrap items-start justify-start gap-16">
           {statistics.map((stat) => (

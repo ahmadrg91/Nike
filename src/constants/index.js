@@ -49,7 +49,7 @@ export const statistics = [
   { value: "250k+", label: "Customers" },
 ];
 
-export const products = [
+export const popularProducts = [
   {
     imgURL: shoe4,
     name: "Nike Air Jordan-01",
@@ -147,4 +147,151 @@ export const socialMedia = [
   { src: facebook, alt: "facebook logo", link: "https://facebook.com" },
   { src: twitter, alt: "twitter logo", link: "https://twitter.com" },
   { src: instagram, alt: "instagram logo", link: "https://instagram.com" },
+];
+
+export const products = [
+  {
+    imgURL: shoe4,
+    name: "Nike Air Jordan-01",
+    price: "$200.20",
+    ratings: 4.7,
+  },
+  {
+    imgURL: shoe5,
+    name: "Nike Air Jordan-10",
+    price: "$210.20",
+    ratings: 4.4,
+  },
+  {
+    imgURL: shoe6,
+    name: "Nike Air Jordan-100",
+    price: "$220.20",
+    ratings: 4.5,
+  },
+  {
+    imgURL: shoe7,
+    name: "Nike Air Jordan-001",
+    price: "$230.20",
+    ratings: 4.9,
+  },
+  {
+    imgURL: shoe4,
+    name: "Nike Air Jordan-01",
+    price: "$200.20",
+    ratings: 4.7,
+  },
+  {
+    imgURL: shoe5,
+    name: "Nike Air Jordan-10",
+    price: "$210.20",
+    ratings: 4.4,
+  },
+  {
+    imgURL: shoe6,
+    name: "Nike Air Jordan-100",
+    price: "$220.20",
+    ratings: 4.5,
+  },
+  {
+    imgURL: shoe7,
+    name: "Nike Air Jordan-001",
+    price: "$230.20",
+    ratings: 4.9,
+  },
+  {
+    imgURL: shoe4,
+    name: "Nike Air Jordan-01",
+    price: "$200.20",
+    ratings: 4.7,
+  },
+  {
+    imgURL: shoe5,
+    name: "Nike Air Jordan-10",
+    price: "$210.20",
+    ratings: 4.4,
+  },
+  {
+    imgURL: shoe6,
+    name: "Nike Air Jordan-100",
+    price: "$220.20",
+    ratings: 4.5,
+  },
+  {
+    imgURL: shoe7,
+    name: "Nike Air Jordan-001",
+    price: "$230.20",
+    ratings: 4.9,
+  },
+  {
+    imgURL: shoe4,
+    name: "Nike Air Jordan-01",
+    price: "$200.20",
+    ratings: 4.7,
+  },
+  {
+    imgURL: shoe5,
+    name: "Nike Air Jordan-10",
+    price: "$210.20",
+    ratings: 4.4,
+  },
+  {
+    imgURL: shoe6,
+    name: "Nike Air Jordan-100",
+    price: "$220.20",
+    ratings: 4.5,
+  },
+  {
+    imgURL: shoe7,
+    name: "Nike Air Jordan-001",
+    price: "$230.20",
+    ratings: 4.9,
+  },
+  {
+    imgURL: shoe4,
+    name: "Nike Air Jordan-01",
+    price: "$200.20",
+    ratings: 4.7,
+  },
+  {
+    imgURL: shoe5,
+    name: "Nike Air Jordan-10",
+    price: "$210.20",
+    ratings: 4.4,
+  },
+  {
+    imgURL: shoe6,
+    name: "Nike Air Jordan-100",
+    price: "$220.20",
+    ratings: 4.5,
+  },
+  {
+    imgURL: shoe7,
+    name: "Nike Air Jordan-001",
+    price: "$230.20",
+    ratings: 4.9,
+  },
+  {
+    imgURL: shoe4,
+    name: "Nike Air Jordan-01",
+    price: "$200.20",
+    ratings: 4.7,
+  },
+  {
+    imgURL: shoe5,
+    name: "Nike Air Jordan-10",
+    price: "$210.20",
+    ratings: 4.4,
+  },
+  {
+    imgURL: shoe6,
+    name: "Nike Air Jordan-100",
+    price: "$220.20",
+    ratings: 4.5,
+  },
+  {
+    imgURL: shoe7,
+    name: "Nike Air Jordan-001",
+    price: "$230.20",
+    ratings: 4.9,
+  },
 ];
