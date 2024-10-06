@@ -8,8 +8,8 @@ const App = () => (
       <Nav />
       <BrowserRouter>
         <Routes>
-          <Route path="/Home" element={<Home />}/>
-          <Route path="/" element={<About />} />
+          <Route path="/" element={<Home />}/>
+          <Route path="/about" element={<About />} />
         </Routes>
       </BrowserRouter>
     </>
