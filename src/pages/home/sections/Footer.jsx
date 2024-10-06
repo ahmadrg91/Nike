@@ -19,6 +19,7 @@ const Footer = () => {
           <div className="mt-8 flex gap-4">
             {socialMedia.map((social) => (
               <a
+                key={social.alt}
                 href={social.link}
                 className="flex h-12 w-12 items-center justify-center rounded-full bg-white"
               >
