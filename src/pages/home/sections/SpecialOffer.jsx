@@ -30,10 +30,7 @@ const SpecialOffer = () => {
           </p>
         </div>
         <div className="mt-11 flex flex-wrap gap-4">
-          <Button
-            label="View Details"
-            icon={arrowRight}
-          />
+          <Button label="View Details" icon={arrowRight} />
           <Button
             label="Learn more"
             bg="bg-white dark:bg-gray-900"

@@ -5,14 +5,9 @@ import { navLinks } from "../constants";
 const Nav = () => {
   return (
     <header className="absolute z-20 w-full py-8">
-      <nav className="max-container flex items-center justify-between padding-x">
+      <nav className="max-container padding-x flex items-center justify-between">
         <a href="/">
-          <img
-            src={headerLogo}
-            alt="Logo"
-            width={130}
-            height={29}
-          />
+          <img src={headerLogo} alt="Logo" width={130} height={29} />
         </a>
         <ul className="flex flex-1 items-center justify-center gap-16 max-lg:hidden">
           {navLinks.map((item) => (
@@ -25,16 +20,11 @@ const Nav = () => {
             </a>
           ))}
         </ul>
-        <a className="max-lg:hidden font-montserrat text-lg text-slate-gray dark:text-slate-400">
+        <a className="font-montserrat text-lg text-slate-gray max-lg:hidden dark:text-slate-400">
           Login / Sign Up
         </a>
         <div className="hidden max-lg:block">
-          <img
-            src={hamburger}
-            alt="Hamburger"
-            height={25}
-            width={25}
-          />
+          <img src={hamburger} alt="Hamburger" height={25} width={25} />
         </div>
       </nav>
     </header>

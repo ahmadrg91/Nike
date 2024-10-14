@@ -5,16 +5,16 @@ import About from "./pages/about/About";
 import Products from "./pages/products/Products";
 
 const App = () => (
-    <>
-      <Nav />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/home" element={<Home />}/>
-          <Route path="/about" element={<About />} />
-          <Route path="/" element={<Products />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+  <>
+    <Nav />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/" element={<Products />} />
+      </Routes>
+    </BrowserRouter>
+  </>
 );
 
 export default App;

@@ -26,10 +26,7 @@ const Hero = () => {
           Discover stylish Nike arrivals, quality comfort, and innovation for
           your active life
         </p>
-        <Button
-          label="Shop Now"
-          icon={faArrowRight}
-        />
+        <Button label="Shop Now" icon={faArrowRight} />
         <div className="mt-16 flex w-full flex-wrap items-start justify-start gap-16">
           {statistics.map((stat) => (
             <div key={stat.label}>
@@ -39,7 +36,7 @@ const Hero = () => {
           ))}
         </div>
       </div>
-      <div className="relative flex w-full flex-1 items-center justify-center bg-hero dark:bg-d-hero bg-cover bg-center max-xl:py-40 xl:min-h-screen">
+      <div className="relative flex w-full flex-1 items-center justify-center bg-hero bg-cover bg-center max-xl:py-40 xl:min-h-screen dark:bg-d-hero">
         <img
           src={currentShoe}
           width={610}

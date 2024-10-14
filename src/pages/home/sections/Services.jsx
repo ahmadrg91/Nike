@@ -5,10 +5,7 @@ const Services = () => {
   return (
     <section className="flex flex-wrap justify-center gap-9">
       {services.map((service) => (
-        <ServiceCard
-          key={service.label}
-          {...service}
-        />
+        <ServiceCard key={service.label} {...service} />
       ))}
     </section>
   );
