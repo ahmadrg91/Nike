@@ -21,7 +21,7 @@ const Products = () => {
   }, [filteredProducts])
 
   return (
-    <main className="max-container padding-x md:padding relative flex flex-col gap-14 pt-24">
+    <main className="max-container padding-x md:padding relative flex flex-col gap-14 pt-24 dark:bg-gray-900 dark:text-slate-200">
       <h1 className="text-center font-palanquin text-4xl font-bold text-coral-red">
         All Products
       </h1>
@@ -31,7 +31,11 @@ const Products = () => {
       </div>
       <section className="flex w-full gap-14">
         <FilterBar filters={filters} setFilters={setFilters} />
-        {isLoading ? <LoadingSpinner /> : <ProductList products={filteredProducts} />}
+        {isLoading 
+        ? <LoadingSpinner /> 
+        : filteredProducts.length !== 0 
+          ? <ProductList products={filteredProducts} />
+          : <h1 className="text-center text-xl font-bold">No Product Matches Your Search</h1>}
       </section>
     </main>
   );

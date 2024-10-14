@@ -16,7 +16,7 @@ const ProductCard = ({ imgURL, name, price, ratings }) => {
         <img src={star} width={18} height={18} className="inline-block" /> (
         {ratings})
       </div>
-      <p className="font-palanquin text-xl font-semibold">{name}</p>
+      <p className="font-palanquin text-xl font-semibold ">{name}</p>
       <p className="font-montserrat text-xl font-semibold text-coral-red">
         $ {price}
       </p>
