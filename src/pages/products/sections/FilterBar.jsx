@@ -12,7 +12,7 @@ const FilterBar = ({ filters, setFilters }) => {
   };
 
   return (
-    <aside className="sticky top-0 hidden h-fit max-h-screen min-h-fit w-80 overflow-scroll rounded border p-4 lg:block">
+    <aside className="sticky top-0 hidden h-fit max-h-screen min-h-fit w-80 overflow-hidden rounded border p-4 lg:block">
       <h6 className="text-center font-palanquin text-2xl font-bold text-slate-800">
         Filters
       </h6>
