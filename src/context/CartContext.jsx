@@ -14,10 +14,7 @@ export const CartProvider = ({ children }) => {
     }, [cart])
 
     const addToCart = itemName => setCart(prevCart => [...prevCart, itemName]);
-    const removeFromCart = itemName => {
-        setCart(prevCart => prevCart.filter(item => item.name != itemName));
-        console.log(localStorage.getItem('cart'));
-    };
+    const removeFromCart = itemName => setCart(prevCart => prevCart.filter(item => item.name != itemName));
 
     return (
         <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
