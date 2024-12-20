@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const ProductCard = ({ imgURL, name, price, ratings }) => {
   return (
     <Link to={`/product/${name}`}>
-      <div className="flex w-full flex-col gap-1 h-full">
+      <div className="flex h-full w-full flex-col gap-1">
         <div className="w-fit bg-product-card bg-cover bg-center dark:bg-d-procuct-card">
           <img
             src={imgURL}
@@ -18,7 +18,7 @@ const ProductCard = ({ imgURL, name, price, ratings }) => {
           <img src={star} width={18} height={18} className="inline-block" /> (
           {ratings})
         </div>
-        <p className="font-palanquin text-xl font-semibold ">{name}</p>
+        <p className="font-palanquin text-xl font-semibold">{name}</p>
         <p className="font-montserrat text-xl font-semibold text-coral-red">
           $ {price}
         </p>

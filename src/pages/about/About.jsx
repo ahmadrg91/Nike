@@ -4,12 +4,12 @@ import { socialMedia } from "../../constants";
 
 const About = () => {
   return (
-    <main className="dark:bg-gray-900 dark:text-slate-200 padding-t">
+    <main className="padding-t dark:bg-gray-900 dark:text-slate-200">
       <section className="padding-t flex flex-col flex-wrap items-center">
         <h1 className="font-palanquin text-4xl font-bold text-coral-red">
           Who We Are ?
         </h1>
-        <div className="md:flex gap-10 p-28">
+        <div className="gap-10 p-28 md:flex">
           <div className="flex-1">
             <img
               src={aboutUsImage}

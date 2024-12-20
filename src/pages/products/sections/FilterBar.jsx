@@ -3,7 +3,6 @@ import Filter from "./Filter";
 import { useFilters } from "../../../hooks/useFilters";
 
 const FilterBar = ({ filters, setFilters }) => {
-
   const handleSlider = (value) => {
     setFilters((prevState) => ({
       ...prevState,
@@ -47,7 +46,13 @@ const FilterBar = ({ filters, setFilters }) => {
         {Object.entries(filters).map(
           ([key, value]) =>
             key !== "price" && (
-              <Filter key={key} title={key} options={value.options} filters={filters} setFilters={setFilters} />
+              <Filter
+                key={key}
+                title={key}
+                options={value.options}
+                filters={filters}
+                setFilters={setFilters}
+              />
             ),
         )}
       </div>

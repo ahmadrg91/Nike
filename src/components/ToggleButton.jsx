@@ -1,5 +1,4 @@
 const ToggleButton = ({ label, selected, onClick }) => {
-
   const handleClick = (e) => {
     onClick && onClick(e);
   };

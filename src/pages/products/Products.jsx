@@ -18,7 +18,7 @@ const Products = () => {
   useEffect(() => {
     setIsLoading(true);
     setTimeout(() => setIsLoading(false), 800);
-  }, [filteredProducts])
+  }, [filteredProducts]);
 
   return (
     <main className="max-container padding-x md:padding relative flex flex-col gap-14 pt-24 dark:bg-gray-900 dark:text-slate-200">
@@ -31,11 +31,15 @@ const Products = () => {
       </div>
       <section className="flex w-full gap-14">
         <FilterBar filters={filters} setFilters={setFilters} />
-        {isLoading 
-        ? <LoadingSpinner /> 
-        : filteredProducts.length !== 0 
-          ? <ProductList products={filteredProducts} />
-          : <h1 className="text-center text-xl font-bold">No Product Matches Your Search</h1>}
+        {isLoading ? (
+          <LoadingSpinner />
+        ) : filteredProducts.length !== 0 ? (
+          <ProductList products={filteredProducts} />
+        ) : (
+          <h1 className="text-center text-xl font-bold">
+            No Product Matches Your Search
+          </h1>
+        )}
       </section>
     </main>
   );
@@ -44,7 +48,7 @@ const Products = () => {
 export default Products;
 
 const ProductList = ({ products }) => (
-  <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-8">
+  <div className="grid flex-1 grid-cols-2 gap-8 sm:grid-cols-3 xl:grid-cols-4">
     {products.map((product, index) => (
       <ProductCard key={index} {...product} />
     ))}

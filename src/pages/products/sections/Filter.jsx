@@ -2,9 +2,11 @@ import ToggleButton from "../../../components/ToggleButton";
 import { capitalize } from "../../../utils";
 
 const Filter = ({ title, options, filters, setFilters }) => {
-
   const handleClick = (e) => {
-    const value = title === "ratings" ? parseInt(e.target.innerText, 10) : e.target.innerText.toLowerCase();
+    const value =
+      title === "ratings"
+        ? parseInt(e.target.innerText, 10)
+        : e.target.innerText.toLowerCase();
 
     if (value === "all") {
       setFilters((prevState) => ({
@@ -12,7 +14,7 @@ const Filter = ({ title, options, filters, setFilters }) => {
         [title]: {
           ...prevState[title],
           currentValues: [],
-        }
+        },
       }));
     } else {
       setFilters((prevState) => ({
@@ -26,7 +28,9 @@ const Filter = ({ title, options, filters, setFilters }) => {
       }));
     }
 
-    if (title === "ratings") {filters[title].currentValues.sort((a, b) => a - b)}
+    if (title === "ratings") {
+      filters[title].currentValues.sort((a, b) => a - b);
+    }
   };
 
   return (
@@ -41,11 +45,13 @@ const Filter = ({ title, options, filters, setFilters }) => {
           onClick={handleClick}
         />
         {options.map((option) => (
-          <ToggleButton 
-            key={option} 
-            label={option} 
-            onClick={handleClick} 
-            selected={filters[title].currentValues.includes(title === "ratings" ? option : option.toLowerCase())} 
+          <ToggleButton
+            key={option}
+            label={option}
+            onClick={handleClick}
+            selected={filters[title].currentValues.includes(
+              title === "ratings" ? option : option.toLowerCase(),
+            )}
           />
         ))}
       </div>
