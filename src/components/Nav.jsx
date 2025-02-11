@@ -1,6 +1,7 @@
 import { headerLogo } from "../assets/images";
 import { hamburger } from "../assets/icons";
-import { navLinks } from "../constants";
+import { navLinks, navLinksRight } from "../constants";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Nav = () => {
   return (
@@ -20,9 +21,18 @@ const Nav = () => {
             </a>
           ))}
         </ul>
-        <a className="font-montserrat text-lg text-slate-gray max-lg:hidden dark:text-slate-400">
-          Login / Sign Up
-        </a>
+        <ul className="flex items-center justify-center gap-6">
+          {
+            navLinksRight.map((item) => (
+              <a
+                key={item.label} 
+                href={item.href}
+              >
+                <FontAwesomeIcon icon={item.icon} />
+              </a>
+            ))
+          }
+        </ul>
         <div className="hidden max-lg:block">
           <img src={hamburger} alt="Hamburger" height={25} width={25} />
         </div>

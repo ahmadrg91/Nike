@@ -1,3 +1,4 @@
+import { faShoppingBag, faUser } from "@fortawesome/free-solid-svg-icons";
 import {
   facebook,
   instagram,
@@ -27,6 +28,11 @@ export const navLinks = [
   { href: "/products", label: "Products" },
   { href: "/contact", label: "Contact Us" },
 ];
+
+export const navLinksRight = [
+  { href: "/cart", label: "Cart", icon: faShoppingBag},
+  { href: "/account", label: "Account", icon: faUser}
+]
 
 export const shoes = [
   {
