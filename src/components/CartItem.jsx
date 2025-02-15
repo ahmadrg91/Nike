@@ -25,7 +25,7 @@ const CartItem = ({
                     className="flex flex-col text-sm font-medium"
                 >
                     {Object.entries(properties).map(([property, value]) => (
-                    <div>
+                    <div key={property}>
                         <span className="text-gray-500">{property}</span>
                         <span className="font-extrabold"> &middot; </span>
                         <span>{value}</span>
