@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const SideBar = ({ subtotal, discounts, setDiscounts }) => {
 
-  const [ country, setCountry ] = useState("Country");
+  const [ country, setCountry ] = useState();
   const [ city, setCity ] = useState();
   const [ coupons, setCoupons ] = useState({
     firstpurchase: {
@@ -14,9 +14,6 @@ const SideBar = ({ subtotal, discounts, setDiscounts }) => {
   const [ shipping , setShipping ] = useState(0);
 
   const countries = {
-    "Country": {
-      "Select City/State": 0.0,
-    },
     "Pakistan" : {
       "Sargodha": 0.0,
       "Lahore": 1.5,
@@ -60,7 +57,7 @@ const SideBar = ({ subtotal, discounts, setDiscounts }) => {
           <form onSubmit={handleShippingUpdate}>
             <div className="flex flex-col gap-3 my-6">
               <div className="rounded-3xl bg-gray-100 pl-2 pr-3">
-                <select name="country" value={country} onChange={(e) => setCountry(e.target.value)} className="py-3 w-full text-sm font-semibold text-gray-700 outline-none bg-transparent">
+                <select name="country" defaultValue="Country" value={country} onChange={(e) => setCountry(e.target.value)} className="py-3 w-full text-sm font-semibold text-gray-700 outline-none bg-transparent">
                   <option disabled>Country</option>
                   {
                     Object.entries(countries).map(([country, cities]) => <option key={country}>{country}</option>)
@@ -69,7 +66,7 @@ const SideBar = ({ subtotal, discounts, setDiscounts }) => {
               </div>
               <div className="w-full flex gap-2">
                 <div className="rounded-3xl w-[45%] bg-gray-100 pl-2 pr-3">
-                  <select name="city" value={city} onChange={(e) => setCity(e.target.value)} className="text-sm py-3 font-semibold w-full text-gray-700 outline-none bg-transparent">
+                  <select name="city" defaultValue="State/City" value={city} onChange={(e) => setCity(e.target.value)} className="text-sm py-3 font-semibold w-full text-gray-700 outline-none bg-transparent">
                     <option disabled>State/City</option>
                     {
                       country && Object.entries(countries[country]).map(([city, charges]) => <option key={city}>{city}</option>)
@@ -102,7 +99,7 @@ const SideBar = ({ subtotal, discounts, setDiscounts }) => {
               <p>Cart Subtotal</p><p>${subtotal}</p>
             </div>
             <div className="flex justify-between">
-              <p>Shipping to {city}</p><p>${shipping}</p>
+              <p>Shipping {city ? `to ${city}` : ""}</p><p>${shipping}</p>
             </div>
             {
               Object.entries(discounts).map(([key, val]) => (
