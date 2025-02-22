@@ -27,7 +27,7 @@ const Connect = () => {
             } 
         </div>
         <div className="flex flex-col justify-center items-center flex-1">
-            <h1 className="font-palanquin text-4xl text-coral-red font-bold">Connect With Us !</h1>
+            <h1 className="font-palanquin text-4xl font-bold"><span className="text-coral-red">Connect</span> With Us !</h1>
             <p className="mt-4 text-center break-words font-montserrat text-lg leading-normal text-slate-gray">Need to reach us directly? Whether you have a question, need support, or just want to chat, you can contact us via email or phone. We're here to assist you and look forward to hearing from you!</p>
         </div>
     </div>
