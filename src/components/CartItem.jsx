@@ -36,7 +36,7 @@ const CartItem = ({
         </div>
         <div className="flex w-[10%] justify-center items-center font-semibold text-center">${price}</div>
         <div id="cart-item-quantity" className="flex w-[30%] justify-center items-center">
-            <button onClick={() => decreaseQuantity(name)} className="flex size-6 items-center justify-center rounded-md border-2 font-bold text-gray-600">
+            <button disabled={quantity == 1} onClick={() => decreaseQuantity(name)} className="disabled:opacity-50 flex size-6 items-center justify-center rounded-md border-2 font-bold text-gray-600">
             &minus;
             </button>
             <span className="mx-5">{quantity}</span>
