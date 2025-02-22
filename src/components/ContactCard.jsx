@@ -1,6 +1,6 @@
 const ContactCard = ({ imgURL, label, subtext }) => {
     return (
-      <div className="flex-1 rounded-[20px] px-5 py-8 shadow-3xl sm:w-[350px] sm:min-w-[350px]">
+      <div className="flex-1 w-full rounded-[20px] px-5 py-8 shadow-3xl">
         <div className="flex h-8 w-8 items-center justify-center rounded-full bg-coral-red">
           <img src={imgURL} width={24} height={24} />
         </div>
