@@ -21,8 +21,8 @@ const Connect = () => {
     <div className="flex justify-center gap-24 m-24">
         <div className="flex flex-1 justify-between flex-col gap-4 mt-12">
             {
-                contacts.map(service => (
-                    <ContactCard key={service.label} {...service} />
+                contacts.map(contact => (
+                    <ContactCard key={contact.label} {...contact} />
                 ))
             } 
         </div>
