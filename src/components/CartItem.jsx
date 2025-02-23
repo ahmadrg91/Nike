@@ -16,7 +16,7 @@ const CartItem = ({
           src={imgURL}
           width={92}
           height={96}
-          className="rounded-lg border object-contain"
+          className="rounded-lg border object-contain dark:border-gray-700"
         />
         <div className="flex flex-col justify-center gap-6">
           <h2 className="font-montserrat text-xl font-semibold">{name}</h2>
@@ -44,14 +44,14 @@ const CartItem = ({
         <button
           disabled={quantity == 1}
           onClick={() => decreaseQuantity(name)}
-          className="flex size-6 items-center justify-center rounded-md border-2 font-bold text-gray-600 disabled:opacity-50"
+          className="flex size-6 items-center justify-center rounded-md border-2 text-gray-600 disabled:opacity-50 dark:border-gray-700 dark:text-slate-200"
         >
           &minus;
         </button>
         <span className="mx-5">{quantity}</span>
         <button
           onClick={() => increaseQuantity(name)}
-          className="flex size-6 items-center justify-center rounded-md border-2 font-bold text-gray-600"
+          className="flex size-6 items-center justify-center rounded-md border-2 text-gray-600 dark:border-gray-700 dark:text-slate-200"
         >
           &#43;
         </button>

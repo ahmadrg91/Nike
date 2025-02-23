@@ -23,27 +23,27 @@ const Cart = () => {
   }, [itemsInCart]);
 
   return (
-    <main className="mx-12 mt-40 flex justify-between gap-4">
-      <div className="flex w-[73%] flex-col">
-        <div>
-          <h1 className="font-palanquin text-3xl font-bold text-coral-red">
-            Shopping Bag
-          </h1>
-          <h2 className="font-montserrat text-sm">
-            <strong>{cart.length} items</strong> in your bag
-          </h2>
-        </div>
+    <main className="mt-24 flex flex-col gap-4 md:mx-12 dark:bg-gray-900 dark:text-slate-200">
+      <div className="mx-4">
+        <h1 className="font-palanquin text-3xl font-bold text-coral-red">
+          Shopping Bag
+        </h1>
+        <h2 className="font-montserrat text-sm">
+          <strong>{cart.length} items</strong> in your bag
+        </h2>
+      </div>
+      <div className="flex gap-4">
         <MainCart
           products={itemsInCart}
           addToCart={addToCart}
           removeFromCart={removeFromCart}
         />
+        <SideBar
+          subtotal={subtotal}
+          discounts={discounts}
+          setDiscounts={setDiscounts}
+        />
       </div>
-      <SideBar
-        subtotal={subtotal}
-        discounts={discounts}
-        setDiscounts={setDiscounts}
-      />
     </main>
   );
 };
