@@ -8,7 +8,7 @@ const SearchBar = ({ setSearchTerm }) => {
   };
 
   return (
-    <div className="flex min-w-64 rounded-full border py-1 pl-4 sm:w-72 md:w-80 lg:w-96">
+    <div className="flex min-w-64 rounded-full border py-1 pl-4 sm:w-72 md:w-80 lg:w-96 dark:border-gray-800">
       <input
         type="text"
         placeholder="Search in All Products"

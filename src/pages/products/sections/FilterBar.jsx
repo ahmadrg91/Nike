@@ -11,8 +11,8 @@ const FilterBar = ({ filters, setFilters }) => {
   };
 
   return (
-    <aside className="sticky top-0 hidden h-fit max-h-screen min-h-fit w-80 overflow-hidden rounded border p-4 lg:block">
-      <h6 className="text-center font-palanquin text-2xl font-bold text-slate-800">
+    <aside className="sticky top-0 hidden h-fit max-h-screen min-h-fit w-80 overflow-hidden rounded border p-4 lg:block dark:border-gray-800">
+      <h6 className="text-center font-palanquin text-2xl font-bold text-slate-800 dark:text-slate-200">
         Filters
       </h6>
       <div className="flex flex-col gap-y-6">

@@ -83,7 +83,7 @@ const ContactForm = () => {
           <button
             disabled={!isValid}
             type="submit"
-            className="w-full rounded-lg border bg-coral-red py-3 font-montserrat text-lg text-white disabled:cursor-not-allowed disabled:opacity-75"
+            className="w-full rounded-lg bg-coral-red py-3 font-montserrat text-lg text-white disabled:cursor-not-allowed dark:opacity-75 dark:disabled:opacity-50"
           >
             Send Message
           </button>

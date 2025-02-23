@@ -22,8 +22,8 @@ const Products = () => {
 
   return (
     <main className="max-container padding-x md:padding relative flex flex-col gap-14 pt-24 dark:bg-gray-900 dark:text-slate-200">
-      <h1 className="text-center font-palanquin text-4xl font-bold text-coral-red">
-        All Products
+      <h1 className="text-center font-palanquin text-4xl font-bold">
+        Explore <span className="text-coral-red">Premium Products</span>
       </h1>
       <div className="flex w-full justify-center gap-2">
         <SearchBar setSearchTerm={setSearchTerm} />
