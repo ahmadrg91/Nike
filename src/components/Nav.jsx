@@ -22,16 +22,11 @@ const Nav = () => {
           ))}
         </ul>
         <ul className="flex items-center justify-center gap-6">
-          {
-            navLinksRight.map((item) => (
-              <a
-                key={item.label} 
-                href={item.href}
-              >
-                <FontAwesomeIcon icon={item.icon} />
-              </a>
-            ))
-          }
+          {navLinksRight.map((item) => (
+            <a key={item.label} href={item.href}>
+              <FontAwesomeIcon icon={item.icon} />
+            </a>
+          ))}
         </ul>
         <div className="hidden max-lg:block">
           <img src={hamburger} alt="Hamburger" height={25} width={25} />

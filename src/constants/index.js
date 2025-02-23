@@ -30,9 +30,9 @@ export const navLinks = [
 ];
 
 export const navLinksRight = [
-  { href: "/cart", label: "Cart", icon: faShoppingBag},
-  { href: "/account", label: "Account", icon: faUser}
-]
+  { href: "/cart", label: "Cart", icon: faShoppingBag },
+  { href: "/account", label: "Account", icon: faUser },
+];
 
 export const shoes = [
   {

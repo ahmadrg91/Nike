@@ -1,4 +1,13 @@
-const FloatingLabelInput = ({ label, type, register, name, watch, validation, isTextarea, errors}) => {
+const FloatingLabelInput = ({
+  label,
+  type,
+  register,
+  name,
+  watch,
+  validation,
+  isTextarea,
+  errors,
+}) => {
   const hasText = watch(name)?.length > 0;
 
   return (
@@ -8,7 +17,7 @@ const FloatingLabelInput = ({ label, type, register, name, watch, validation, is
           <textarea
             id={name}
             {...register(name, validation)}
-            className="peer border p-3 w-full rounded-md focus:border-coral-red focus:outline-none resize-none"
+            className="peer w-full resize-none rounded-md border p-3 focus:border-coral-red focus:outline-none"
             rows="4"
           />
         ) : (
@@ -17,19 +26,21 @@ const FloatingLabelInput = ({ label, type, register, name, watch, validation, is
             autoComplete="disabled"
             id={name}
             {...register(name, validation)}
-            className="peer border p-3 w-full rounded-md focus:border-coral-red focus:outline-none"
+            className="peer w-full rounded-md border p-3 focus:border-coral-red focus:outline-none"
           />
         )}
         <label
           htmlFor={name}
-          className={`absolute left-3 bg-white px-1 transition-all delay-100 ease-in ${isTextarea && !(hasText) ? "-translate-y-14 peer-focus:-translate-y-1/2" : "-translate-y-1/2"}  ${
-            hasText ? "top-0 text-xs text-coral-red" : "top-1/2  text-gray-500"
+          className={`absolute left-3 bg-white px-1 transition-all delay-100 ease-in ${isTextarea && !hasText ? "-translate-y-14 peer-focus:-translate-y-1/2" : "-translate-y-1/2"} ${
+            hasText ? "top-0 text-xs text-coral-red" : "top-1/2 text-gray-500"
           } peer-focus:top-0 peer-focus:text-xs peer-focus:text-coral-red`}
         >
           {label}
         </label>
       </div>
-      {errors && <p className="text-red-500 text-sm mt-1 ml-2">{errors.message}</p>}
+      {errors && (
+        <p className="ml-2 mt-1 text-sm text-red-500">{errors.message}</p>
+      )}
     </div>
   );
 };

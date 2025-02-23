@@ -13,26 +13,28 @@ export const CartProvider = ({ children }) => {
   }, [cart]);
 
   const addToCart = (itemName) => {
-    setCart(prevCart => {
-      let temp = prevCart.map(i =>
-        i.name === itemName ? {...i, quantity: i.quantity + 1} : i
+    setCart((prevCart) => {
+      let temp = prevCart.map((i) =>
+        i.name === itemName ? { ...i, quantity: i.quantity + 1 } : i,
       );
-      return temp.some(i => i.name == itemName)
-      ? temp
-      : [...temp, {name: itemName, quantity: 1}];
+      return temp.some((i) => i.name == itemName)
+        ? temp
+        : [...temp, { name: itemName, quantity: 1 }];
     });
-  }
+  };
 
-  const removeFromCart = (itemName) => { 
-    setCart(prevCart => {
-      let temp = prevCart.map(item =>
-        item.name == itemName ? {...item, quantity: item.quantity - 1} : item
-      ).filter(item =>
-        item.quantity > 0
-      );
+  const removeFromCart = (itemName) => {
+    setCart((prevCart) => {
+      let temp = prevCart
+        .map((item) =>
+          item.name == itemName
+            ? { ...item, quantity: item.quantity - 1 }
+            : item,
+        )
+        .filter((item) => item.quantity > 0);
       return temp;
     });
-  }
+  };
 
   return (
     <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
