@@ -4,7 +4,7 @@ import ContactForm from "./sections/ContactForm";
 
 const Contact = () => {
     return (
-        <main className="mt-24">
+        <main className="my-24 mx-2 md:m-24 flex flex-col gap-24">
             <ContactForm />
             <Connect />
             <Location />
