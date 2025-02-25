@@ -23,7 +23,7 @@ const ContactForm = () => {
     <div className="flex flex-1 flex-col items-center gap-8 md:flex-row md:gap-24">
       <div className="flex flex-1 flex-col items-center justify-center text-center">
         <h1 className="font-palanquin text-4xl font-bold">
-          We <span className="text-coral-red">Love To Hear</span> From You !
+          We <span className="text-coral-red whitespace-nowrap">Love To Hear</span> From You !
         </h1>
         <p className="mt-4 break-words font-montserrat text-lg leading-normal text-slate-gray">
           Have questions or feedback? Reach out to us—we're here to help!
@@ -59,6 +59,7 @@ const ContactForm = () => {
             label="Email"
             validation={{
               required: { value: true, message: "Please enter your Email" },
+              pattern: { value: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/, message: "Please enter a valid Email Address" }
             }}
             watch={watch}
             register={register}
@@ -73,7 +74,7 @@ const ContactForm = () => {
                 value: 10,
                 message: "The message must at least be 10 characters long",
               },
-              required: { value: true, message: "Please enter a message" },
+              required: { value: true, message: "Please enter your Message" },
             }}
             watch={watch}
             register={register}
@@ -83,7 +84,7 @@ const ContactForm = () => {
           <button
             disabled={!isValid}
             type="submit"
-            className="w-full rounded-lg bg-coral-red py-3 font-montserrat text-lg text-white disabled:cursor-not-allowed dark:opacity-75 dark:disabled:opacity-50"
+            className="w-full rounded-lg bg-coral-red py-3 font-montserrat text-lg text-white disabled:cursor-not-allowed disabled:opacity-75 dark:disabled:opacity-50"
           >
             Send Message
           </button>
