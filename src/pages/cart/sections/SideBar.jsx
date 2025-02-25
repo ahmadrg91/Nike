@@ -187,7 +187,7 @@ const SideBar = ({ subtotal, discounts, setDiscounts }) => {
             <span>${shipping}</span>
           </p>
           <p className="text-md flex justify-between font-semibold">
-            <span>Total Amount: </span>
+            <span>Total Amount </span>
             <span className="text-lg">
               ${(subtotal - totalDiscount + shipping).toFixed(2)}
             </span>
