@@ -12,14 +12,14 @@ export const CartProvider = ({ children }) => {
     localStorage.setItem("nike-clone-cart", JSON.stringify(cart));
   }, [cart]);
 
-  const addToCart = (itemName) => {
+  const addToCart = (itemName, quantity=1) => {
     setCart((prevCart) => {
       let temp = prevCart.map((i) =>
-        i.name === itemName ? { ...i, quantity: i.quantity + 1 } : i,
+        i.name === itemName ? { ...i, quantity: i.quantity + quantity } : i,
       );
       return temp.some((i) => i.name == itemName)
         ? temp
-        : [...temp, { name: itemName, quantity: 1 }];
+        : [...temp, { name: itemName, quantity: quantity }];
     });
   };
 

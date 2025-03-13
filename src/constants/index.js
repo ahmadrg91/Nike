@@ -20,6 +20,13 @@ import {
   thumbnailShoe1,
   thumbnailShoe2,
   thumbnailShoe3,
+  
+  shoePairFront,
+  shoePairTop,
+  shoePairSideTop,
+  shoeSide,
+  shoeAllSides,
+
 } from "../assets/images";
 
 export const navLinks = [
@@ -157,157 +164,1331 @@ export const socialMedia = [
 
 export const products = [
   {
-    imgURL: shoe4,
-    name: "Nike Air Jordan-01",
-    price: 200.2,
+    name: "Nike Vomero 18",
+    price: 150.0,
     gender: "man",
-    sport: "basketball",
+    sport: "training",
     category: "shoes",
-    color: "black",
-    size: 10,
-    ratings: 4.7,
+    color: "hm6803-100",
+    size: [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    ratings: 4.5
   },
   {
-    imgURL: shoe5,
-    name: "Nike Air Jordan-10",
-    price: 210.2,
-    gender: "man",
-    sport: "basketball",
-    category: "shoes",
-    color: "blue",
-    size: 11,
-    ratings: 4.4,
-  },
-  {
-    imgURL: shoe6,
-    name: "Nike Air Jordan-100",
-    price: 220.2,
-    gender: "man",
-    sport: "basketball",
-    category: "shoes",
-    color: "white",
-    size: 9,
-    ratings: 4.5,
-  },
-  {
-    imgURL: shoe7,
-    name: "Nike Air Jordan-001",
-    price: 230.2,
-    gender: "woman",
-    sport: "basketball",
-    category: "shoes",
-    color: "black",
-    size: 8,
-    ratings: 4.9,
-  },
-  {
-    imgURL: shoe4,
-    name: "Nike Air Max 270",
-    price: 180.0,
-    gender: "man",
+    name: "Nike Vomero 18",
+    price: 150.0,
+    gender: "unisex",
     sport: "running",
     category: "shoes",
-    color: "green",
-    size: 10,
-    ratings: 4.6,
+    color: "hm6803-103",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 4.8
   },
   {
-    imgURL: shoe5,
-    name: "Nike React Infinity Run",
-    price: 160.0,
-    gender: "woman",
-    sport: "running",
-    category: "shoes",
-    color: "yellow",
-    size: 7,
-    ratings: 4.3,
-  },
-  {
-    imgURL: shoe6,
-    name: "Nike Air Zoom Pegasus",
-    price: 130.0,
-    gender: "man",
-    sport: "running",
-    category: "shoes",
-    color: "red",
-    size: 9,
-    ratings: 4.8,
-  },
-  {
-    imgURL: shoe7,
-    name: "Nike Court Vision Low",
-    price: 90.0,
-    gender: "woman",
-    sport: "basketball",
-    category: "shoes",
-    color: "purple",
-    size: 8,
-    ratings: 4.5,
-  },
-  {
-    imgURL: shoe4,
-    name: "Nike Dri-FIT T-Shirt",
-    price: 25.0,
-    gender: "man",
-    sport: "football",
-    category: "clothing",
-    color: "black",
-    size: "M",
-    ratings: 4.2,
-  },
-  {
-    imgURL: shoe5,
-    name: "Nike Pro Shorts",
-    price: 35.0,
-    gender: "woman",
-    sport: "football",
-    category: "clothing",
-    color: "red",
-    size: "S",
-    ratings: 4.4,
-  },
-  {
-    imgURL: shoe6,
-    name: "Nike Elite Basketball Socks",
-    price: 15.0,
-    gender: "man",
-    sport: "basketball",
-    category: "accessories",
-    color: "white",
-    size: "L",
-    ratings: 4.7,
-  },
-  {
-    imgURL: shoe7,
-    name: "Nike Heritage86 Cap",
-    price: 30.0,
-    gender: "woman",
-    sport: "basketball",
-    category: "accessories",
-    color: "black",
-    size: "One Size",
-    ratings: 4.5,
-  },
-  {
-    imgURL: shoe4,
-    name: "Nike Air Vapormax",
-    price: 250.0,
-    gender: "man",
-    sport: "running",
-    category: "shoes",
-    color: "orange",
-    size: 11,
-    ratings: 4.9,
-  },
-  {
-    imgURL: shoe5,
-    name: "Nike Air Zoom Structure",
+    name: "Nike Vomero 18",
     price: 150.0,
     gender: "woman",
     sport: "running",
     category: "shoes",
-    color: "white",
-    size: 7,
-    ratings: 4.6,
+    color: "hm6803-101",
+    size: [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    ratings: 4.6
   },
+  {
+    name: "Nike Vomero 18",
+    price: 150.0,
+    gender: "woman",
+    sport: "football",
+    category: "accessories",
+    color: "hm6803-001",
+    size: [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    ratings: 4.9
+  },
+  {
+    name: "Nike Vomero 18",
+    price: 150.0,
+    gender: "man",
+    sport: "running",
+    category: "clothing",
+    color: "hm6803-002",
+    size: [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    ratings: 5.0
+  },
+  {
+    name: "Nike Vomero 18",
+    price: 150.0,
+    gender: "unisex",
+    sport: "training",
+    category: "accessories",
+    color: "hm6804-100",
+    size: [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    ratings: 4.9
+  },
+  {
+    name: "Nike Vomero 18",
+    price: 150.0,
+    gender: "unisex",
+    sport: "football",
+    category: "clothing",
+    color: "hm6804-101",
+    size: [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    ratings: 4.6
+  },
+  {
+    name: "Nike Vomero 18",
+    price: 150.0,
+    gender: "unisex",
+    sport: "basketball",
+    category: "accessories",
+    color: "hm6804-102",
+    size: [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    ratings: 4.6
+  },
+  {
+    name: "Nike Vomero 18",
+    price: 150.0,
+    gender: "woman",
+    sport: "basketball",
+    category: "accessories",
+    color: "hm6804-105",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 4.8
+  },
+  {
+    name: "Nike Vomero 18",
+    price: 120.0,
+    gender: "woman",
+    sport: "football",
+    category: "clothing",
+    color: "hq2157-103",
+    size: [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    ratings: 4.7
+  },
+  {
+    name: "Nike Vomero 18",
+    price: 120.0,
+    gender: "woman",
+    sport: "football",
+    category: "clothing",
+    color: "hq2157-102",
+    size: [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    ratings: 4.6
+  },
+  {
+    name: "Nike Air Max Dn8",
+    price: 190.0,
+    gender: "woman",
+    sport: "running",
+    category: "clothing",
+    color: "fq7860-002",
+    size: [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    ratings: 4.9
+  },
+  {
+    name: "Nike Air Max Dn8",
+    price: 190.0,
+    gender: "woman",
+    sport: "casual",
+    category: "accessories",
+    color: "fq7860-003",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 4.8
+  },
+  {
+    name: "Nike Air Max Dn8",
+    price: 190.0,
+    gender: "man",
+    sport: "football",
+    category: "shoes",
+    color: "fq7860-006",
+    size: [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    ratings: 4.8
+  },
+  {
+    name: "Nike Air Max Dn8",
+    price: 190.0,
+    gender: "unisex",
+    sport: "training",
+    category: "shoes",
+    color: "fq7860-008",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 4.7
+  },
+  {
+    name: "Nike Air Max Dn8",
+    price: 190.0,
+    gender: "woman",
+    sport: "football",
+    category: "shoes",
+    color: "fq7860-500",
+    size: [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    ratings: 4.5
+  },
+  {
+    name: "Nike Air Max Plus",
+    price: 180.0,
+    gender: "man",
+    sport: "running",
+    category: "shoes",
+    color: "dm0032-013",
+    size: [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    ratings: 4.5
+  },
+  {
+    name: "Nike Air Max Plus",
+    price: 180.0,
+    gender: "unisex",
+    sport: "basketball",
+    category: "clothing",
+    color: "dm0032-014",
+    size: [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    ratings: 4.5
+  },
+  {
+    name: "Nike Air Max Plus",
+    price: 180.0,
+    gender: "man",
+    sport: "running",
+    category: "accessories",
+    color: "dm0032-200",
+    size: [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    ratings: 4.5
+  },
+  {
+    name: "Nike Life",
+    price: 110.0,
+    gender: "man",
+    sport: "training",
+    category: "clothing",
+    color: "",
+    size: [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    ratings: 4.5
+  },
+  {
+    name: "Nike 24.7 PerfectStretch",
+    price: 125.0,
+    gender: "woman",
+    sport: "running",
+    category: "accessories",
+    color: "hq6918-010",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 5.0
+  },
+  {
+    name: "Nike 24.7 PerfectStretch",
+    price: 125.0,
+    gender: "woman",
+    sport: "running",
+    category: "accessories",
+    color: "hq6918-320",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 4.6
+  },
+  {
+    name: "Nike 24.7 PerfectStretch",
+    price: 125.0,
+    gender: "unisex",
+    sport: "training",
+    category: "shoes",
+    color: "hq6918-451",
+    size: [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    ratings: 4.9
+  },
+  {
+    name: "Nike 24.7 PerfectStretch",
+    price: 125.0,
+    gender: "unisex",
+    sport: "training",
+    category: "clothing",
+    color: "hq6918-251",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 5.0
+  },
+  {
+    name: "Nike 24.7 PerfectStretch",
+    price: 125.0,
+    gender: "unisex",
+    sport: "casual",
+    category: "clothing",
+    color: "hq6918-084",
+    size: [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    ratings: 4.5
+  },
+  {
+    name: "Nike V5 RNR",
+    price: 90.0,
+    gender: "unisex",
+    sport: "casual",
+    category: "shoes",
+    color: "hq7901-100",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 5.0
+  },
+  {
+    name: "Nike V5 RNR",
+    price: 90.0,
+    gender: "woman",
+    sport: "casual",
+    category: "accessories",
+    color: "hq7901-101",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 4.6
+  },
+  {
+    name: "Nike V5 RNR",
+    price: 90.0,
+    gender: "unisex",
+    sport: "basketball",
+    category: "clothing",
+    color: "hq7901-102",
+    size: [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    ratings: 4.9
+  },
+  {
+    name: "Nike Air Max Dn8",
+    price: 190.0,
+    gender: "woman",
+    sport: "casual",
+    category: "shoes",
+    color: "hf5509-001",
+    size: [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    ratings: 4.5
+  },
+  {
+    name: "Nike Air Max Dn8",
+    price: 190.0,
+    gender: "man",
+    sport: "running",
+    category: "accessories",
+    color: "hf5509-002",
+    size: [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    ratings: 4.8
+  },
+  {
+    name: "Nike Air Max Dn8",
+    price: 190.0,
+    gender: "man",
+    sport: "basketball",
+    category: "shoes",
+    color: "hf5509-600",
+    size: [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    ratings: 4.7
+  },
+  {
+    name: "Nike 24.7 PerfectStretch",
+    price: 130.0,
+    gender: "woman",
+    sport: "casual",
+    category: "accessories",
+    color: "hm8385-004",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 4.6
+  },
+  {
+    name: "Nike 24.7 PerfectStretch",
+    price: 130.0,
+    gender: "woman",
+    sport: "training",
+    category: "shoes",
+    color: "hm8385-010",
+    size: [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    ratings: 4.8
+  },
+  {
+    name: "Nike 24.7 PerfectStretch",
+    price: 130.0,
+    gender: "unisex",
+    sport: "running",
+    category: "accessories",
+    color: "hm8385-133",
+    size: [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    ratings: 4.6
+  },
+  {
+    name: "Nike 24.7 PerfectStretch",
+    price: 130.0,
+    gender: "unisex",
+    sport: "training",
+    category: "clothing",
+    color: "hm8385-455",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 4.7
+  },
+  {
+    name: "Nike Sportswear",
+    price: 105.0,
+    gender: "woman",
+    sport: "running",
+    category: "shoes",
+    color: "hm8385-455",
+    size: [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    ratings: 4.6
+  },
+  {
+    name: "Nike Air Max Dn8",
+    price: 160.0,
+    gender: "unisex",
+    sport: "basketball",
+    category: "clothing",
+    color: "hf7310-001",
+    size: [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    ratings: 4.7
+  },
+  {
+    name: "Nike Air Max Dn8",
+    price: 160.0,
+    gender: "unisex",
+    sport: "running",
+    category: "accessories",
+    color: "hf7310-004",
+    size: [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    ratings: 5.0
+  },
+  {
+    name: "Nike Air Max Dn8",
+    price: 160.0,
+    gender: "man",
+    sport: "training",
+    category: "shoes",
+    color: "hf7310-005",
+    size: [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    ratings: 4.6
+  },
+  {
+    name: "Nike Dunk Low SE",
+    price: 100.0,
+    gender: "unisex",
+    sport: "football",
+    category: "accessories",
+    color: "hf7310-005",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 4.6
+  },
+  {
+    name: "Nike Sportswear",
+    price: 80.0,
+    gender: "woman",
+    sport: "running",
+    category: "clothing",
+    color: "hf8205-010",
+    size: [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    ratings: 4.8
+  },
+  {
+    name: "Nike Sportswear",
+    price: 80.0,
+    gender: "woman",
+    sport: "training",
+    category: "shoes",
+    color: "hf8205-480",
+    size: [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    ratings: 4.8
+  },
+  {
+    name: "Nike Sportswear Club",
+    price: 45.0,
+    gender: "woman",
+    sport: "training",
+    category: "shoes",
+    color: "hf8141-010",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 4.8
+  },
+  {
+    name: "Nike Sportswear Club",
+    price: 45.0,
+    gender: "man",
+    sport: "football",
+    category: "accessories",
+    color: "hf8141-084",
+    size: [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    ratings: 4.7
+  },
+  {
+    name: "Nike Sportswear Club",
+    price: 45.0,
+    gender: "unisex",
+    sport: "running",
+    category: "accessories",
+    color: "hf8141-297",
+    size: [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    ratings: 4.5
+  },
+  {
+    name: "Nike Sportswear Club",
+    price: 45.0,
+    gender: "woman",
+    sport: "football",
+    category: "shoes",
+    color: "hf8141-410",
+    size: [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    ratings: 5.0
+  },
+  {
+    name: "Nike Sportswear Club",
+    price: 45.0,
+    gender: "woman",
+    sport: "training",
+    category: "accessories",
+    color: "hf8141-489",
+    size: [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    ratings: 4.5
+  },
+  {
+    name: "Air Jordan 3 Retro \"Lucky Shorts\"",
+    price: 200.0,
+    gender: "unisex",
+    sport: "running",
+    category: "clothing",
+    color: "hf8141-489",
+    size: [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    ratings: 4.8
+  },
+  {
+    name: "Air Jordan 3 Retro \"Lucky Shorts\"",
+    price: 150.0,
+    gender: "unisex",
+    sport: "casual",
+    category: "clothing",
+    color: "hf8141-489",
+    size: [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    ratings: 4.7
+  },
+  {
+    name: "Air Jordan Skyline GORE-TEX",
+    price: 500.0,
+    gender: "man",
+    sport: "football",
+    category: "shoes",
+    color: "hf8141-489",
+    size: [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    ratings: 4.5
+  },
+  {
+    name: "Air Jordan Skyline GORE-TEX",
+    price: 200.0,
+    gender: "woman",
+    sport: "football",
+    category: "shoes",
+    color: "hf8141-489",
+    size: [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    ratings: 4.9
+  },
+  {
+    name: "Nike Air Max 90 GORE-TEX",
+    price: 96.97,
+    gender: "unisex",
+    sport: "running",
+    category: "accessories",
+    color: "dj9779-003",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 4.6
+  },
+  {
+    name: "Nike Air Max 90 GORE-TEX",
+    price: 160.0,
+    gender: "woman",
+    sport: "running",
+    category: "clothing",
+    color: "fd5810-102",
+    size: [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    ratings: 5.0
+  },
+  {
+    name: "Nike Air Max 90 GORE-TEX",
+    price: 112.97,
+    gender: "man",
+    sport: "football",
+    category: "shoes",
+    color: "fd5810-201",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 4.5
+  },
+  {
+    name: "Nike Air Max 90 GORE-TEX",
+    price: 112.97,
+    gender: "man",
+    sport: "football",
+    category: "clothing",
+    color: "fd5810-003",
+    size: [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    ratings: 5.0
+  },
+  {
+    name: "Nike Air Max 1",
+    price: 140.0,
+    gender: "man",
+    sport: "running",
+    category: "shoes",
+    color: "fd9082-107",
+    size: [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    ratings: 4.8
+  },
+  {
+    name: "Nike Air Max 1",
+    price: 98.97,
+    gender: "man",
+    sport: "football",
+    category: "shoes",
+    color: "fn6952-100",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 4.8
+  },
+  {
+    name: "Nike Air Max 1",
+    price: 84.97,
+    gender: "woman",
+    sport: "running",
+    category: "accessories",
+    color: "hm9936-001",
+    size: [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    ratings: 4.5
+  },
+  {
+    name: "Nike Air Max 1 Essential",
+    price: 97.97,
+    gender: "unisex",
+    sport: "training",
+    category: "accessories",
+    color: "fz5808-101",
+    size: [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    ratings: 4.5
+  },
+  {
+    name: "Nike Air Max 1 Essential",
+    price: 99.97,
+    gender: "woman",
+    sport: "basketball",
+    category: "accessories",
+    color: "fz5808-100",
+    size: [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    ratings: 5.0
+  },
+  {
+    name: "Nike Air Max 1 Essential",
+    price: 84.97,
+    gender: "man",
+    sport: "casual",
+    category: "accessories",
+    color: "fz5808-004",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 4.8
+  },
+  {
+    name: "Nike Air Max 1 Essential",
+    price: 84.97,
+    gender: "man",
+    sport: "casual",
+    category: "clothing",
+    color: "fz5808-006",
+    size: [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    ratings: 4.9
+  },
+  {
+    name: "Nike Air Max 1 Essential",
+    price: 105.97,
+    gender: "man",
+    sport: "basketball",
+    category: "shoes",
+    color: "fz5808-007",
+    size: [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    ratings: 4.6
+  },
+  {
+    name: "Nike Air Max 1 Essential",
+    price: 105.97,
+    gender: "man",
+    sport: "basketball",
+    category: "clothing",
+    color: "fz5808-008",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 4.7
+  },
+  {
+    name: "Nike Air Max 1 Essential",
+    price: 140.0,
+    gender: "unisex",
+    sport: "casual",
+    category: "shoes",
+    color: "fz5808-009",
+    size: [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    ratings: 4.8
+  },
+  {
+    name: "Nike Air Max 1 Essential",
+    price: 105.97,
+    gender: "unisex",
+    sport: "running",
+    category: "accessories",
+    color: "fz5808-010",
+    size: [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    ratings: 4.8
+  },
+  {
+    name: "Nike Air Max 1 Essential",
+    price: 140.0,
+    gender: "unisex",
+    sport: "running",
+    category: "clothing",
+    color: "fz5808-102",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 4.6
+  },
+  {
+    name: "Nike Air Max 1 Essential",
+    price: 105.97,
+    gender: "man",
+    sport: "basketball",
+    category: "shoes",
+    color: "fz5808-400",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 5.0
+  },
+  {
+    name: "Nike Solo Swoosh",
+    price: 105.0,
+    gender: "man",
+    sport: "casual",
+    category: "shoes",
+    color: "dq5209-063",
+    size: [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    ratings: 4.6
+  },
+  {
+    name: "Nike Solo Swoosh",
+    price: 105.0,
+    gender: "man",
+    sport: "training",
+    category: "shoes",
+    color: "dq5209-010",
+    size: [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    ratings: 4.7
+  },
+  {
+    name: "Nike Solo Swoosh",
+    price: 68.97,
+    gender: "unisex",
+    sport: "casual",
+    category: "accessories",
+    color: "dq5209-051",
+    size: [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    ratings: 4.6
+  },
+  {
+    name: "Nike Solo Swoosh",
+    price: 105.0,
+    gender: "man",
+    sport: "football",
+    category: "accessories",
+    color: "dq5209-072",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 4.9
+  },
+  {
+    name: "Nike Solo Swoosh",
+    price: 105.0,
+    gender: "unisex",
+    sport: "training",
+    category: "accessories",
+    color: "dq5209-412",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 4.8
+  },
+  {
+    name: "Nike Solo Swoosh",
+    price: 105.0,
+    gender: "man",
+    sport: "running",
+    category: "accessories",
+    color: "dq5209-844",
+    size: [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    ratings: 4.6
+  },
+  {
+    name: "Nike Solo Swoosh",
+    price: 100.0,
+    gender: "man",
+    sport: "running",
+    category: "shoes",
+    color: "dx1364-010",
+    size: [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    ratings: 4.8
+  },
+  {
+    name: "Nike Solo Swoosh",
+    price: 100.0,
+    gender: "woman",
+    sport: "casual",
+    category: "shoes",
+    color: "dx1364-051",
+    size: [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    ratings: 5.0
+  },
+  {
+    name: "Nike Solo Swoosh",
+    price: 100.0,
+    gender: "woman",
+    sport: "running",
+    category: "clothing",
+    color: "dx1364-063",
+    size: [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    ratings: 4.9
+  },
+  {
+    name: "Nike Solo Swoosh",
+    price: 100.0,
+    gender: "woman",
+    sport: "running",
+    category: "accessories",
+    color: "dx1364-072",
+    size: [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    ratings: 4.6
+  },
+  {
+    name: "Nike Solo Swoosh",
+    price: 100.0,
+    gender: "man",
+    sport: "training",
+    category: "accessories",
+    color: "dx1364-231",
+    size: [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    ratings: 4.7
+  },
+  {
+    name: "Nike Solo Swoosh",
+    price: 75.97,
+    gender: "woman",
+    sport: "casual",
+    category: "clothing",
+    color: "dx1364-412",
+    size: [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    ratings: 4.8
+  },
+  {
+    name: "Nike Solo Swoosh",
+    price: 70.97,
+    gender: "man",
+    sport: "running",
+    category: "accessories",
+    color: "dx1364-464",
+    size: [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    ratings: 4.7
+  },
+  {
+    name: "Nike Solo Swoosh",
+    price: 100.0,
+    gender: "unisex",
+    sport: "football",
+    category: "clothing",
+    color: "dx1364-844",
+    size: [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    ratings: 4.8
+  },
+  {
+    name: "Nike V2K Run",
+    price: 120.0,
+    gender: "man",
+    sport: "running",
+    category: "clothing",
+    color: "hv4314-030",
+    size: [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    ratings: 4.9
+  }
 ];

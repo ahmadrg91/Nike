@@ -14,7 +14,7 @@ const Products = () => {
   const [isLoading, setIsLoading] = useState(true);
   const { filters, setFilters } = useFilters();
   const filteredProducts = useFilteredProducts(products, searchTerm, filters);
-
+  
   useEffect(() => {
     setIsLoading(true);
     setTimeout(() => setIsLoading(false), 800);

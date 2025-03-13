@@ -40,7 +40,6 @@ export const useFilteredProducts = (products, searchTerm, filters) => {
 
     setFilteredProducts(newProducts);
 
-    console.log("chla");
   }, [products, searchTerm, filters]);
 
   return filteredProducts;

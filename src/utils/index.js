@@ -9,3 +9,4 @@ export const removeAndGet = (array, itemName) => {
     return removed[0];
   }
 };
+

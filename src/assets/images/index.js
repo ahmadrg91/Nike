@@ -23,6 +23,17 @@ import thumbnailShoe3 from "./thumbnail-shoe3.svg";
 
 import aboutUsImage from "./aboutus-image.jpg";
 
+import greyShoeSide1 from "./grey-shoe-side.png";
+import greyShoeSide2 from "./grey-shoe-side-2.png";
+import greyShoeSide3 from "./grey-shoe-side-3.png";
+
+import shoePairFront from "./shoe-pair-front.png";
+import shoePairSideTop from "./shoe-pair-side-top.png";
+import shoePairTop from "./shoe-pair-top.png";
+import shoeSide from "./shoe-side.png";
+import shoeAllSides from "./shoe-all-sides.png";
+
+
 export {
   bigShoe1,
   bigShoe2,
@@ -42,4 +53,9 @@ export {
   thumbnailShoe2,
   thumbnailShoe3,
   aboutUsImage,
+  shoePairFront,
+  shoePairTop,
+  shoePairSideTop,
+  shoeSide,
+  shoeAllSides,
 };

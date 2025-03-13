@@ -11,6 +11,9 @@ import star from "./star.svg";
 import truckFast from "./truck-fast.svg";
 import twitter from "./twitter.svg";
 import search from "./search.svg";
+import heart from "./heart-outline.svg";
+import truck from "./delivery-truck.svg";
+import box from "./box-icon.svg"
 
 export {
   arrowRight,
@@ -26,4 +29,7 @@ export {
   truckFast,
   twitter,
   search,
+  heart,
+  truck,
+  box,
 };

@@ -1,20 +1,23 @@
-import { faArrowRight, faCartPlus } from "@fortawesome/free-solid-svg-icons";
-import { bigShoe1 } from "../../assets/images";
-import Button from "../../components/Button";
-import { products, shoes } from "../../constants";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { products } from "../../constants";
 import ProductCard from "../../components/ProductCard";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
+import { box, heart, star, truck } from "../../assets/icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 const Product = () => {
   const params = useParams();
   const product = products.find((product) => product.name === params.name);
-  const [selectedImg, setSelectedImg] = useState(product.imgURL);
+  const [selectedImg, setSelectedImg] = useState();
   const { addToCart } = useCart();
+  const [ properties, setProperties ] = useState({
+    quantity: 1,
+    size: product.size[0],
+  });
 
-  const [tabs, setTabs] = useState([
+  const tabs = [
     {
       title: "Description",
       content:
@@ -35,122 +38,150 @@ const Product = () => {
       content:
         "Your satisfaction is our priority. If for any reason you're not happy with your purchase, we offer a hassle-free return policy within 30 days of delivery. Items must be unused and in their original packaging to qualify for a full refund. Once your return is processed, refunds are typically issued within 5-7 business days. Need an exchange instead? We've got you covered with a quick and simple process to get you the perfect product.",
     },
-  ]);
+  ];
   const [currentTab, setCurrentTab] = useState(tabs[0]);
 
   return (
     <main className="padding mt-12">
-      <section className="flex justify-around">
-        <div className="flex flex-col items-center gap-10">
-          <img width={610} height={500} src={selectedImg} />
-          <div className="flex gap-5">
-            <div
-              className={`w-fit rounded-lg border-2 p-4 ${selectedImg === product.imgURL && "border-coral-red"} cursor-pointer`}
-              onClick={() => setSelectedImg(product.imgURL)}
+      <section className="flex">
+        <div className="flex flex-1 flex-col items-center gap-10">
+          <div className="flex items-center">
+            {/* <button
+              onClick={() => {
+                let index = products.findIndex(product => product.imgURL === selectedImg);
+                index -= 1
+                if (index < 0){
+                  index = products.length - 1
+                }
+                setSelectedImg(products[index].imgURL)
+              }}
             >
-              <img
-                src={product.imgURL}
-                className="object-contain"
-                width={107}
-                height={93}
-              />
+              <FontAwesomeIcon icon={faChevronLeft} className="text-xl" />
+            </button> */}
+            <div>
+              <img width={480}  src={selectedImg} alt={product.name}/>
             </div>
-            {products
-              .filter((temp) => temp.imgURL !== product.imgURL)
-              .slice(1, 4)
-              .map((product) => (
+            {/* <button
+              onClick={() => {
+                let index = products.findIndex((product) => product.imgURL === selectedImg);
+                index = (index + 1) % products.length
+                setSelectedImg(products[index].imgURL)
+              }}
+            >
+              <FontAwesomeIcon icon={faChevronRight} className="text-xl" />
+            </button> */}
+          </div>
+          <div className="flex gap-2">
+            {product.imgURL.map((url) => (
                 <div
-                  className={`${selectedImg === product.imgURL && "border-coral-red"} w-fit cursor-pointer rounded-lg border-2 p-4`}
-                  onClick={() => setSelectedImg(product.imgURL)}
+                  className={`${selectedImg === url && "border-coral-red border-2"} w-fit h-fit cursor-pointer rounded-lg border p-4`}
+                  onMouseOver={() => setSelectedImg(url)}
                 >
                   <img
-                    src={product.imgURL}
+                    src={url}
                     className="object-contain"
-                    width={107}
-                    height={93}
+                    width={67}
                   />
                 </div>
               ))}
           </div>
         </div>
-        <div className="flex flex-col">
-          <h1 className="py-12 font-montserrat text-4xl font-semibold">
-            {product.name}
-          </h1>
-          <div className="mt-10 flex w-full gap-10 font-medium">
-            <span className="hover:cursor-pointer">Select Size</span>
-            <span className="hover:cursor-pointer">Size Guide</span>
+        <div className="flex flex-1 flex-col gap-5">
+          <div>
+            <h1 className="font-palanquin text-4xl mb-4">
+              {product.name}
+            </h1>
+            <p className="flex font-montserrat items-center gap-2 mb-1">
+              <img 
+                src={star}
+                className="size-4"
+              />
+              <span>
+                {product.ratings}
+              </span>
+            </p>
+            <button className="w-fit flex items-center gap-2 font-montserrat">
+              <img 
+                src={heart}
+                className="size-4"
+              />
+              <span>
+                Add to Wishlist
+              </span>
+            </button>
           </div>
-          <div className="grid grid-cols-4 gap-4 pt-6">
-            <button className="h-12 w-16 rounded border">3.5Y</button>
-            <button className="h-12 w-16 rounded border">4Y</button>
-            <button className="h-12 w-16 rounded border">4.5Y</button>
-            <button className="h-12 w-16 rounded border">5Y</button>
-            <button className="h-12 w-16 rounded border">5.5Y</button>
-            <button className="h-12 w-16 rounded border">6Y</button>
-            <button className="h-12 w-16 rounded border">6.5Y</button>
-            <button className="h-12 w-16 rounded border">7Y</button>
+          <span className="text-xl font-medium font-montserrat">${product.price} USD</span>
+          <div>
+            <h6 className="font-semibold text-md font-palanquin">Size</h6>
+            <div className="flex gap-2 mt-3 text-sm font-montserrat font-semibold">
+              {
+                product.size.map(size => <button className={`h-10 w-14 rounded border hover:border-2 hover:border-gray-900 ${size === properties.size && "border-gray-900 border-2"}`} onClick={() => setProperties(prev => {return {...prev, size: size}})}>{size} US</button>)
+              }
+            </div>
           </div>
-          <div className="mt-12 flex items-center gap-20">
-            <Button
-              label="Add to Cart"
-              icon={faCartPlus}
-              onClick={() => addToCart(product.name)}
-            />
-            <span className="text-3xl font-medium">${product.price}</span>
+          <div>
+            <h6 className="font-semibold text-md font-palanquin">Qauntity</h6>
+            <div className="flex items-center gap-3 mt-3">
+              <div className="flex">
+                <button className="bg-gray-100 w-11 h-11 border rounded-l-full disabled:opacity-50 disabled:cursor-not-allowed" onClick={() => setProperties(prev => {return {...prev, quantity: prev.quantity - 1}})} disabled={properties.quantity <= 1}>-</button>
+                <span className="flex items-center border-t border-b font-palanquin text-lg justify-center w-16">{properties.quantity}</span>
+                <button className="bg-gray-100 w-11 h-11 border rounded-r-full" onClick={() => setProperties(prev => {return {...prev, quantity: prev.quantity + 1}})}>+</button>
+              </div>
+              <button className="border rounded-full h-11 px-6 bg-coral-red text-white font-semibold font-montserrat disabled:opacity-65 disabled:cursor-not-allowed" disabled={properties.quantity <= 0} onClick={() => addToCart(product.name, properties.quantity)}>
+                Add to Cart
+              </button>
+            </div>
           </div>
-          <div className="mt-24 grid grid-cols-2 gap-y-6 font-medium opacity-80">
-            <a href="#product-details">
-              <span className="flex items-center gap-6">
-                Description <FontAwesomeIcon icon={faArrowRight} />
+          <div className="flex justify-around py-4 my-4 border-t border-b">
+              <span className="flex items-center gap-2 text-sm font-palanquin">
+                <img 
+                  src={truck}
+                  className="size-5"
+                />
+                <p>
+                  Order over <span className="font-montserrat">$</span>50 ship free
+                </p>
               </span>
-            </a>
-            <a href="#product-details">
-              <span className="flex items-center gap-6">
-                Size & Fit <FontAwesomeIcon icon={faArrowRight} />
+              <span className="flex items-center gap-2 text-sm font-palanquin">
+                <img 
+                  src={box}
+                  className="size-4"
+                />
+                <p>
+                  Worry-Free Guarantee
+                </p>
               </span>
-            </a>
-            <a href="#product-details">
-              <span className="flex items-center gap-6">
-                Free Shipping <FontAwesomeIcon icon={faArrowRight} />
-              </span>
-            </a>
-            <a href="#product-details">
-              <span className="flex items-center gap-6">
-                Free Shipping & Returns <FontAwesomeIcon icon={faArrowRight} />
-              </span>
-            </a>
+          </div>
+          <div>
+            <div className="flex justify-center">
+              <ul className="flex justify-between w-full font-palanquin">
+                {tabs.map((tab) => (
+                  <li
+                    key={tab.title}
+                    className="flex h-full flex-col gap-1"
+                  >
+                    <button
+                      className={`${tab === currentTab ? "text-coral-red" : "text-gray-600"} font-planquin font-medium`}
+                      onClick={() => setCurrentTab(tab)}
+                    >
+                      {tab.title}
+                    </button>
+                    <span
+                      className={`${tab === currentTab ? "block" : "hidden"} h-1 rounded-sm bg-coral-red`}
+                    ></span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div id="product-details" className="mt-6">
+              <p className="tex-lg text-justify font-montserrat text-gray-600">
+                {currentTab.content}
+              </p>
+            </div>
           </div>
         </div>
       </section>
-      <section>
-        <div className="mt-24 flex justify-center">
-          <ul className="flex h-12 justify-between">
-            {tabs.map((tab) => (
-              <li
-                key={tab.title}
-                className="flex h-full w-44 flex-col justify-between"
-              >
-                <button
-                  className={`${tab === currentTab ? "text-coral-red" : "text-gray-500"} font-planquin font-medium`}
-                  onClick={() => setCurrentTab(tab)}
-                >
-                  {tab.title}
-                </button>
-                <span
-                  className={`${tab === currentTab ? "block" : "hidden"} h-1 w-full rounded-sm bg-coral-red`}
-                ></span>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div id="product-details" className="mt-12 h-32 px-80">
-          <p className="tex-lg text-justify font-montserrat text-gray-600">
-            {currentTab.content}
-          </p>
-        </div>
-      </section>
-      <section className="padding">
+      <section className="mt-24">
         <h1 className="font-montserrat text-2xl font-semibold">
           You May Also Like
         </h1>
