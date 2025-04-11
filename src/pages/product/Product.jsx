@@ -14,7 +14,7 @@ const Product = () => {
   const { addToCart } = useCart();
   const [ properties, setProperties ] = useState({
     quantity: 1,
-    size: product.size[0],
+    size: product.size,
   });
 
   const tabs = [
@@ -71,7 +71,7 @@ const Product = () => {
               <FontAwesomeIcon icon={faChevronRight} className="text-xl" />
             </button> */}
           </div>
-          <div className="flex gap-2">
+          {/* <div className="flex gap-2">
             {product.imgURL.map((url) => (
                 <div
                   className={`${selectedImg === url && "border-coral-red border-2"} w-fit h-fit cursor-pointer rounded-lg border p-4`}
@@ -84,7 +84,7 @@ const Product = () => {
                   />
                 </div>
               ))}
-          </div>
+          </div> */}
         </div>
         <div className="flex flex-1 flex-col gap-5">
           <div>
@@ -113,11 +113,11 @@ const Product = () => {
           <span className="text-xl font-medium font-montserrat">${product.price} USD</span>
           <div>
             <h6 className="font-semibold text-md font-palanquin">Size</h6>
-            <div className="flex gap-2 mt-3 text-sm font-montserrat font-semibold">
+            {/* <div className="flex gap-2 mt-3 text-sm font-montserrat font-semibold">
               {
                 product.size.map(size => <button className={`h-10 w-14 rounded border hover:border-2 hover:border-gray-900 ${size === properties.size && "border-gray-900 border-2"}`} onClick={() => setProperties(prev => {return {...prev, size: size}})}>{size} US</button>)
               }
-            </div>
+            </div> */}
           </div>
           <div>
             <h6 className="font-semibold text-md font-palanquin">Qauntity</h6>

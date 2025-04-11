@@ -1,13 +1,13 @@
 import { star } from "../assets/icons";
 import { Link } from "react-router-dom";
 
-const ProductCard = ({ name, price, ratings, color }) => {
+const ProductCard = ({ name, price, ratings, imgURL }) => {
   return (
     <Link to={`/product/${name}`}>
       <div className="flex h-full w-full flex-col gap-1">
         <div className="w-fit bg-product-card bg-cover bg-center dark:bg-d-procuct-card">
           <img
-            src={`../../src/assets/products/images/${name.split(" ").join("").split('.').join("")}_${color.toUpperCase()}_0.jpg`}
+            src={imgURL}
             alt="shoe card"
             width={212}
             height={212}
