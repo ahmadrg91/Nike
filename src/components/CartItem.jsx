@@ -13,7 +13,7 @@ const CartItem = ({
     <div className="flex justify-between">
       <div className="flex w-[50%] gap-10">
         <img
-          src={imgURL}
+          src={imgURL[0]}
           width={92}
           height={96}
           className="rounded-lg border object-contain dark:border-gray-700"

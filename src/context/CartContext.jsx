@@ -4,12 +4,12 @@ const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState(() => {
-    const savedCart = localStorage.getItem("nike-clone-cart");
+    const savedCart = localStorage.getItem("cart");
     return savedCart ? JSON.parse(savedCart) : [];
   });
 
   useEffect(() => {
-    localStorage.setItem("nike-clone-cart", JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
   const addToCart = (itemName, quantity=1) => {

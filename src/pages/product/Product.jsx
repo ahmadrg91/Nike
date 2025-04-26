@@ -1,6 +1,6 @@
 import { products } from "../../constants";
 import ProductCard from "../../components/ProductCard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 import { box, heart, star, truck } from "../../assets/icons";
@@ -12,10 +12,15 @@ const Product = () => {
   const product = products.find((product) => product.name === params.name);
   const [selectedImg, setSelectedImg] = useState();
   const { addToCart } = useCart();
-  const [ properties, setProperties ] = useState({
-    quantity: 1,
-    size: product.size,
-  });
+  const [ properties, setProperties ] = useState();
+
+  useEffect(() => {
+    setSelectedImg(product.imgURL[0]);
+    setProperties({
+      quantity: 1,
+      size: product.sizes[0],
+    })
+  }, [product])
 
   const tabs = [
     {
@@ -46,34 +51,14 @@ const Product = () => {
       <section className="flex">
         <div className="flex flex-1 flex-col items-center gap-10">
           <div className="flex items-center">
-            {/* <button
-              onClick={() => {
-                let index = products.findIndex(product => product.imgURL === selectedImg);
-                index -= 1
-                if (index < 0){
-                  index = products.length - 1
-                }
-                setSelectedImg(products[index].imgURL)
-              }}
-            >
-              <FontAwesomeIcon icon={faChevronLeft} className="text-xl" />
-            </button> */}
             <div>
               <img width={480}  src={selectedImg} alt={product.name}/>
             </div>
-            {/* <button
-              onClick={() => {
-                let index = products.findIndex((product) => product.imgURL === selectedImg);
-                index = (index + 1) % products.length
-                setSelectedImg(products[index].imgURL)
-              }}
-            >
-              <FontAwesomeIcon icon={faChevronRight} className="text-xl" />
-            </button> */}
           </div>
-          {/* <div className="flex gap-2">
-            {product.imgURL.map((url) => (
-                <div
+          <div className="flex gap-2">
+            {
+            product.imgURL.map((url) => (
+              <div
                   className={`${selectedImg === url && "border-coral-red border-2"} w-fit h-fit cursor-pointer rounded-lg border p-4`}
                   onMouseOver={() => setSelectedImg(url)}
                 >
@@ -82,9 +67,9 @@ const Product = () => {
                     className="object-contain"
                     width={67}
                   />
-                </div>
-              ))}
-          </div> */}
+                </div>)
+              )}
+          </div>
         </div>
         <div className="flex flex-1 flex-col gap-5">
           <div>
@@ -113,21 +98,21 @@ const Product = () => {
           <span className="text-xl font-medium font-montserrat">${product.price} USD</span>
           <div>
             <h6 className="font-semibold text-md font-palanquin">Size</h6>
-            {/* <div className="flex gap-2 mt-3 text-sm font-montserrat font-semibold">
+            <div className="flex gap-2 mt-3 text-sm font-montserrat font-semibold">
               {
-                product.size.map(size => <button className={`h-10 w-14 rounded border hover:border-2 hover:border-gray-900 ${size === properties.size && "border-gray-900 border-2"}`} onClick={() => setProperties(prev => {return {...prev, size: size}})}>{size} US</button>)
+                product.sizes.map(size => <button className={`h-10 w-14 rounded border hover:border-2 hover:border-gray-900 ${size === properties?.size && "border-gray-900 border-2"}`} onClick={() => setProperties(prev => {return {...prev, size: size}})}>{size} US</button>)
               }
-            </div> */}
+            </div>
           </div>
           <div>
             <h6 className="font-semibold text-md font-palanquin">Qauntity</h6>
             <div className="flex items-center gap-3 mt-3">
               <div className="flex">
-                <button className="bg-gray-100 w-11 h-11 border rounded-l-full disabled:opacity-50 disabled:cursor-not-allowed" onClick={() => setProperties(prev => {return {...prev, quantity: prev.quantity - 1}})} disabled={properties.quantity <= 1}>-</button>
-                <span className="flex items-center border-t border-b font-palanquin text-lg justify-center w-16">{properties.quantity}</span>
+                <button className="bg-gray-100 w-11 h-11 border rounded-l-full disabled:opacity-50 disabled:cursor-not-allowed" onClick={() => setProperties(prev => {return {...prev, quantity: prev.quantity - 1}})} disabled={properties?.quantity <= 1}>-</button>
+                <span className="flex items-center border-t border-b font-palanquin text-lg justify-center w-16">{properties?.quantity}</span>
                 <button className="bg-gray-100 w-11 h-11 border rounded-r-full" onClick={() => setProperties(prev => {return {...prev, quantity: prev.quantity + 1}})}>+</button>
               </div>
-              <button className="border rounded-full h-11 px-6 bg-coral-red text-white font-semibold font-montserrat disabled:opacity-65 disabled:cursor-not-allowed" disabled={properties.quantity <= 0} onClick={() => addToCart(product.name, properties.quantity)}>
+              <button className="border rounded-full h-11 px-6 bg-coral-red text-white font-semibold font-montserrat disabled:opacity-65 disabled:cursor-not-allowed" disabled={properties?.quantity <= 0} onClick={() => addToCart(product.name, properties?.quantity)}>
                 Add to Cart
               </button>
             </div>
@@ -161,13 +146,13 @@ const Product = () => {
                     className="flex h-full flex-col gap-1"
                   >
                     <button
-                      className={`${tab === currentTab ? "text-coral-red" : "text-gray-600"} font-planquin font-medium`}
+                      className={`${tab.title === currentTab.title ? "text-coral-red" : "text-gray-600"} font-planquin font-medium`}
                       onClick={() => setCurrentTab(tab)}
                     >
                       {tab.title}
                     </button>
                     <span
-                      className={`${tab === currentTab ? "block" : "hidden"} h-1 rounded-sm bg-coral-red`}
+                      className={`${tab.title === currentTab.title ? "block" : "hidden"} h-1 visible rounded-sm bg-coral-red`}
                     ></span>
                   </li>
                 ))}

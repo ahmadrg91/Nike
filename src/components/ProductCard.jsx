@@ -7,7 +7,7 @@ const ProductCard = ({ name, price, ratings, imgURL }) => {
       <div className="flex h-full w-full flex-col gap-1">
         <div className="w-fit bg-product-card bg-cover bg-center dark:bg-d-procuct-card">
           <img
-            src={imgURL}
+            src={imgURL[0]}
             alt="shoe card"
             width={212}
             height={212}
