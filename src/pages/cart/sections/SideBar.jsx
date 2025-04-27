@@ -116,7 +116,7 @@ const SideBar = ({ subtotal, discounts, setDiscounts }) => {
                 name="coupon"
                 type="text"
                 placeholder="Coupon Code"
-                className="mx-2 w-full bg-transparent text-slate-200 outline-none"
+                className="mx-2 w-full bg-transparent text-slate-700 outline-none"
               />
             </div>
             <input
