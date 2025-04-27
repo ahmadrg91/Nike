@@ -13,13 +13,19 @@ const Product = () => {
   const [selectedImg, setSelectedImg] = useState();
   const { addToCart } = useCart();
   const [ properties, setProperties ] = useState();
+  const [ moreProducts, setMoreProducts ] = useState();
 
   useEffect(() => {
     setSelectedImg(product.imgURL[0]);
     setProperties({
       quantity: 1,
       size: product.sizes[0],
-    })
+    });
+
+    setMoreProducts(() => {
+      const n = Math.floor(Math.random() * (products.length - 5 + 1)) + 5;
+      return products.slice(n-5, n);
+    });
   }, [product])
 
   const tabs = [
@@ -171,7 +177,7 @@ const Product = () => {
           You May Also Like
         </h1>
         <div className="mt-10 flex justify-around">
-          {products.slice(1, 6).map((product) => (
+          {moreProducts?.map((product) => (
             <ProductCard
               imgURL={product.imgURL}
               name={product.name}
