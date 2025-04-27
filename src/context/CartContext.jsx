@@ -23,11 +23,11 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  const removeFromCart = (itemName) => {
+  const decrementItemQuantity = (itemName) => {
     setCart((prevCart) => {
       let temp = prevCart
         .map((item) =>
-          item.name == itemName
+          item.name === itemName
             ? { ...item, quantity: item.quantity - 1 }
             : item,
         )
@@ -36,8 +36,12 @@ export const CartProvider = ({ children }) => {
     });
   };
 
+  const removeFromCart = (itemName) => {
+    setCart((prevCart) => prevCart.filter((item) => item.name !== itemName));
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, decrementItemQuantity }}>
       {children}
     </CartContext.Provider>
   );

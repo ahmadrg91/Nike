@@ -1,4 +1,5 @@
-import React from "react";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const CartItemMobile = ({
   name,
@@ -8,12 +9,21 @@ const CartItemMobile = ({
   properties,
   increaseQuantity,
   decreaseQuantity,
+  removeFromCart,
 }) => {
   return (
     <div className="flex w-full items-center justify-between gap-2">
       <div className="flex gap-2">
+      <div className="flex items-center mr-4">
+          <button
+            className="border border-gray-300 rounded-full size-6 flex items-center justify-center"
+            onClick={() => removeFromCart(name)}
+          >
+            <FontAwesomeIcon icon={faXmark} />
+          </button>
+      </div>
         <img
-          src={imgURL}
+          src={imgURL[0]}
           className="size-20 rounded-md border dark:border-gray-700"
         />
         <div className="flex flex-col">

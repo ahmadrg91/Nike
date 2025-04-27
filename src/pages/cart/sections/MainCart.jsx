@@ -2,12 +2,12 @@ import CartItem from "../../../components/CartItem";
 import CartItemMobile from "../../../components/CartItemMobile";
 import { capitalize } from "../../../utils";
 
-const MainCart = ({ products, addToCart, removeFromCart }) => {
+const MainCart = ({ products, addToCart, removeFromCart, decrementItemQuantity }) => {
   return (
     <>
       <ul className="hidden h-fit flex-col gap-10 rounded-2xl p-12 shadow-[0px_0px_25px_0px_rgba(0,0,0,0.1)] md:flex md:w-[80%] dark:bg-gray-800">
         <li className="flex justify-between font-bold">
-          <div className="w-[50%]">Product</div>
+          <div className="w-[50%] ml-11">Product</div>
           <div className="w-[10%] text-center">Price</div>
           <div className="w-[30%] text-center">Quantity</div>
           <div className="w-[10%] text-center">Total Price</div>
@@ -25,7 +25,8 @@ const MainCart = ({ products, addToCart, removeFromCart }) => {
               }}
               {...product}
               increaseQuantity={addToCart}
-              decreaseQuantity={removeFromCart}
+              decreaseQuantity={decrementItemQuantity}
+              removeFromCart={removeFromCart}
             />
           </li>
         ))}
@@ -44,7 +45,8 @@ const MainCart = ({ products, addToCart, removeFromCart }) => {
               }}
               {...product}
               increaseQuantity={addToCart}
-              decreaseQuantity={removeFromCart}
+              decreaseQuantity={decrementItemQuantity}
+              removeFromCart={removeFromCart}
             />
           </li>
         ))}

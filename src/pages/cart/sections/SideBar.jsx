@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "../../../components/Button";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const SideBar = ({ subtotal, discounts, setDiscounts }) => {
   const [country, setCountry] = useState();
@@ -150,9 +151,12 @@ const SideBar = ({ subtotal, discounts, setDiscounts }) => {
               </p>
             </div>
           </div>
-          <button className="mt-4 w-full rounded-3xl bg-white p-3 font-semibold">
-            Checkout
-          </button>
+          <Link to={"/checkout"}>
+            <button className="mt-4 w-full rounded-3xl bg-white p-3 font-semibold">
+              Checkout
+            </button>
+          </Link>
+
         </div>
       </div>
       <div className="fixed bottom-0 flex h-60 w-full flex-col justify-between rounded-t-2xl border bg-white p-4 font-montserrat md:hidden dark:border-gray-800 dark:bg-gray-900">
@@ -193,7 +197,9 @@ const SideBar = ({ subtotal, discounts, setDiscounts }) => {
             </span>
           </p>
         </div>
-        <Button label="Checkout" icon={faArrowRight} fullWidth />
+        <Link to={"/checkout"}>
+          <Button label="Checkout" icon={faArrowRight} fullWidth />
+        </Link>
       </div>
     </>
   );

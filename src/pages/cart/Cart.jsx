@@ -5,7 +5,7 @@ import MainCart from "./sections/MainCart";
 import SideBar from "./sections/SideBar";
 
 const Cart = () => {
-  const { cart, addToCart, removeFromCart } = useCart();
+  const { cart, addToCart, removeFromCart, decrementItemQuantity } = useCart();
   const [subtotal, setSubtotal] = useState();
   const [discounts, setDiscounts] = useState({});
 
@@ -37,6 +37,7 @@ const Cart = () => {
           products={itemsInCart}
           addToCart={addToCart}
           removeFromCart={removeFromCart}
+          decrementItemQuantity={decrementItemQuantity}
         />
         <SideBar
           subtotal={subtotal}

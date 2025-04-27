@@ -14,6 +14,8 @@ import search from "./search.svg";
 import heart from "./heart-outline.svg";
 import truck from "./delivery-truck.svg";
 import box from "./box-icon.svg"
+import locationIcon from "./location.svg";
+
 
 export {
   arrowRight,
@@ -32,4 +34,5 @@ export {
   heart,
   truck,
   box,
+  locationIcon,
 };

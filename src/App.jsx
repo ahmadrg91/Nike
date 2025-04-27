@@ -7,6 +7,8 @@ import Product from "./pages/product/Product";
 import ScrollToTop from "./components/ScrollToTop";
 import Cart from "./pages/cart/Cart";
 import Contact from "./pages/contact/Contact";
+import Checkout from "./pages/checkout/Checkout";
+
 const App = () => (
   <>
     <Nav />
@@ -19,6 +21,7 @@ const App = () => (
         <Route path="/product/:name" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </BrowserRouter>
   </>
